@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grab and display</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index">Grab and display</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                    <h1>
+                        <span>Grab and display</span>
+                    </h1>
+                </div>
+
+
+        <div class="jumbotron">
+            <table class="table table-inverse table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>公司名称</th>
+                  <th>评论人数</th>
+                  <th>综合得分</th>
+                  <th>相符</th>
+                  <th>面试官</th>
+                  <th>环境</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                @for/list[([c collections])]{
+                 @list{
+                    <tr>
+                      <th scope="row">@(list-ref c 0)</th>
+                      <td>@(list-ref c 1)</td>
+                      <td>@(list-ref c 2)</td>
+                      <td>@(list-ref c 3)</td>
+                      <td>@(list-ref c 4)</td>
+                      <td>@(list-ref c 5)</td>
+                      <td>@(list-ref c 6)</td>
+                    </tr>
+                 }
+                }
+          </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
