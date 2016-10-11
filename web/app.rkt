@@ -33,8 +33,7 @@
     (map (lambda (row)
          (vector->list row))
        (query-all)))
-  (define ret (render-template all-data))
-  (response-to ret))
+  (response-to (render-template all-data)))
 
 
 (serve/servlet index
